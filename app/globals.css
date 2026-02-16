@@ -1,0 +1,121 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.development-carousel {
+  @apply max-h-[382px] sm:min-h-[388px] md:min-h-[422px] lg:min-h-[448px] flex items-center justify-center md:justify-start [&_li]:mx-6 [&_img]:max-w-none animate-infinite-scroll;
+}
+
+.development-carousel-list {
+  @apply flex flex-col items-center justify-center bg-background-card pt-6 rounded-3xl h-full;
+}
+
+.development-carousel-text {
+  @apply flex flex-col justify-around text-2xl lg:pb-[54px] xs:text-[26px] md:text-[32px] lg:text-[44px] h-full font-bold w-full pb-8 px-[30px];
+}
+
+#chatbot-link {
+  @apply text-blue-500 underline hover:text-blue-700;
+}
+
+.custom-link-footer {
+  @apply text-custom-link-footer hover:underline hover:text-custom-link-footer-hover;
+}
+
+.custom-link-yellow-500 {
+  @apply text-yellow-500 underline hover:text-blue-500;
+}
+
+.custom-privacy-terms-conditions {
+  @apply text-primary underline hover:text-blue-500;
+}
+
+.confirmation-link {
+  @apply text-blue-500 underline hover:text-yellow-500;
+}
+.subscribe-link {
+  @apply text-blue-500 hover:text-yellow-500;
+}
+.subscribe-button {
+  @apply px-3 mx-auto w-max font-bold flex items-center justify-center py-2 rounded-md  bg-background-dark relative duration-75 border-blue-400 border-2 hover:border-blue-500;
+}
+.confirmation-box {
+  @apply mb-4 p-4 bg-background-innerCard rounded-[24px];
+}
+
+/* .calendly-inline {
+  @apply md:h-[700px];
+  @apply h=[620px]
+} */
+
+.calendly-inline {
+  height: 620px; /* Default height */
+}
+
+@media (min-width: 768px) { /* Tailwind's md breakpoint */
+  .calendly-inline {
+    height: 700px; /* Height for medium screens and up */
+  }
+}
+
+.custom-line-clamp-cards {
+  display: inline-block;
+  max-width: 100%;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  vertical-align: bottom;
+}
+
+.image-carousel {
+  @apply rounded-3xl object-cover hover:scale-[1.03] duration-300;
+}
+
+.image-services {
+  border-top-left-radius: 24px;
+  border-top-right-radius: 24px;
+}
+
+.features-table-medium {
+  @apply md:justify-evenly lg:max-h-12 border-b min-h-[40px] max-h-[100px] md:max-h-[120px] items-center border-border-table-list flex justify-between py-[8px] text-subheading gap-3 md:flex-col lg:gap-0;
+}
+
+.features {
+  @apply lg:min-h-[40px] border-b max-h-[100px] md:max-h-[120px] items-center border-border-table-list text-left py-[8px] text-subheading gap-4 md:flex-col lg:gap-0 cursor-pointer;
+}
+
+.features-checked {
+  @apply min-h-6 min-w-6 max-h-[25.33px] max-w-6 rounded-full
+}
+
+.features-list {
+  @apply border-b-[1.5px] border-dotted border-red-500 min-h-[25.33px] max-h-[25.33px]}
+
+.linear-mask {
+  mask-image: linear-gradient(
+    -75deg,
+    white calc(var(--x) + 20%),
+    transparent calc(var(--x) + 30%),
+    white calc(var(--x) + 100%)
+  );
+  -webkit-mask-image: linear-gradient(
+    -75deg,
+    white calc(var(--x) + 20%),
+    transparent calc(var(--x) + 30%),
+    white calc(var(--x) + 100%)
+  );
+}
+
+.linear-overlay {
+  background-image: linear-gradient(
+    -75deg,
+    rgba(var(--overlay-color), 0.1) calc(var(--x) + 20%),
+    rgba(var(--overlay-color), 0.5) calc(var(--x) + 25%),
+    rgba(var(--overlay-color), 0.1) calc(var(--x) + 100%)
+  );
+  mask: linear-gradient(black, black) content-box, linear-gradient(black, black);
+  -webkit-mask: linear-gradient(black, black) content-box,
+    linear-gradient(black, black);
+  mask-composite: exclude;
+  -webkit-mask-composite: xor;
+}
